@@ -12,8 +12,8 @@ describe("createdAtDate", () => {
     ${30} | ${"2019-12-02"}
     ${60} | ${"2019-11-02"}
   `("expected:$expected, when days:$days", ({ days, expected }) => {
-    const minutes = createdAtDate(days);
+    const date = createdAtDate(days);
 
-    expect(minutes).toEqual(expected);
+    expect(date).toEqual(expected);
   });
 });
