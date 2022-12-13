@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": 2,
+    // This line should be removed and the errors fixed
+    "jsx-a11y/click-events-have-key-events": 0,
+
+    // This line should be removed and the errors fixed
+    "jsx-a11y/label-has-associated-control": 0,
+
+    // This line should be removed and the errors fixed
+    "jsx-a11y/no-autofocus": 0,
+
+    // This line should be removed and the errors fixed
+    "jsx-a11y/no-static-element-interactions": 0,
+
+    "react/jsx-child-element-spacing": 0,
+    "react/jsx-max-props-per-line": 0,
+    "react/jsx-no-bind": 0,
+    "react/jsx-no-target-blank": 0
+  }
+}
