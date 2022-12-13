@@ -13,6 +13,7 @@ const noop = () => {};
 const defaultState = {
   addFavorite: noop,
   currentPage: 0,
+  handleReload: noop,
   itemsOrder: "desc" as ItemsOrder,
   isError: false,
   isFavourited: () => false,
@@ -95,12 +96,20 @@ export const RepositoriesProvider = ({
     "Swift",
   ];
 
+  const handleReload = () => {
+    setCurrentPage(1);
+    setFilterByLanguage("All");
+    setItemsOrder("desc");
+    setPriorDays(7);
+  }
+
   const contextValues = useMemo(
     () => ({
       addFavorite,
       isFavourited,
       currentPage,
       filterByLanguage,
+      handleReload,
       itemsOrder,
       isError,
       isLoading,
@@ -123,6 +132,7 @@ export const RepositoriesProvider = ({
     [
       repositories,
       addFavorite,
+      handleReload,
       isFavourited,
       currentPage,
       filterByLanguage,

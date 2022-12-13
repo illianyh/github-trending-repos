@@ -34,6 +34,7 @@ export type RContextType = {
   addFavorite: (repo: Repository) => void;
   currentPage: number;
   filterByLanguage: string | undefined;
+  handleReload: () => void;
   itemsOrder: ItemsOrder;
   isError: boolean;
   isFavourited: (id: Repository["id"]) => boolean;

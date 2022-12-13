@@ -1,4 +1,5 @@
 import {
+  Anchor,
   Container,
   Grid,
   Title,
@@ -15,6 +16,7 @@ function RepoList() {
   const {
     addFavorite,
     currentPage,
+    handleReload,
     setCurrentPage,
     isFavourited,
     isLoading,
@@ -27,7 +29,10 @@ function RepoList() {
 
   return (
     <Container size={"xl"} pb={40}>
-      <Title mt={24}>Trending repos</Title>
+      <Anchor variant="text" component="button" type="button" onClick={handleReload}>
+        <Title color={"dark"} mt={24}>Trending repos</Title>
+      </Anchor>
+
       <Filters />
       <Grid style={{ height: "100%" }} pt={24} pb={24}>
         {repositories?.length === 0 && (
