@@ -17,5 +17,5 @@ This project includes the following setup:
 ## How to run
 ```
 yarn install
-yarn start
+yarn dev
 ```
